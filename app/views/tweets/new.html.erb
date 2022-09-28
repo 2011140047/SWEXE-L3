@@ -1,0 +1,18 @@
+<% if @tweet.errors.present? %>
+    <h3>エラーがあります。</h3>
+    <ul>
+        <% @tweet.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+<%= form_for @tweet , tdate: {action: :create} do |f| %>
+    <%= f.label :message, 'メッセージ' %>
+    <%= f.text_field :message %>
+    <p><%= f.label :file, '画像' %>
+    <%= f.file_field :file %></p>
+    <p><%= f.label :tdate, '日時' %>
+    <%= @tweet.tdate %></p>
+    <%= f.submit '登録' %>
+<% end %>

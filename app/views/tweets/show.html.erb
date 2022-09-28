@@ -1,0 +1,13 @@
+<p>
+<strong>メッセージ：</strong> 
+<%= @tweet.message %> 
+</p> 
+<p>
+<strong>画像 : </string>
+<%= image_tag "/get_image/#{@tweet.id}" %>
+</p>
+<p> 
+<strong>日時：</strong> 
+<%= @tweet.tdate %> 
+</p> 
+<%= link_to '戻る', '/' %> 

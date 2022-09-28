@@ -1,0 +1,9 @@
+<%= form_for @tweet , tdate: {action: :update} do |f| %>
+    <%= f.label :message, 'メッセージ : ' %>
+    <%= f.text_field :message %>
+    <p><%= f.label :file, '画像 : ' %>
+    <%= f.file_field :file %></p>
+    <%= f.label :tdate, '日時 : ' %>
+    <%= @tweet.tdate %>
+    <p><%= f.submit '更新' %></p>
+<% end %>
