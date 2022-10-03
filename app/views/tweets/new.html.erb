@@ -13,6 +13,6 @@
     <p><%= f.label :file, '画像' %>
     <%= f.file_field :file %></p>
     <p><%= f.label :tdate, '日時' %>
-    <%= @tweet.tdate %></p>
+    <%= Time.current %></p>
     <%= f.submit '登録' %>
 <% end %>
